@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-2 text-dark-5 dark:bg-[#020D1A] dark:text-dark-6;
+  }
+}
+
+@layer utilities {
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .custom-scrollbar {
+    @apply overflow-auto;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply size-2;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply relative flex-1 rounded-full bg-neutral-200/40 dark:bg-stroke-dark;
+  }
+
+
+  .chat-height {
+    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+  }
+
+  .inbox-height {
+    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+  }
+
+  /* Gold gradient theme */
+  .custom-gradient-gold {
+    background: linear-gradient(135deg, #FEF9E7 0%, #E6C659 100%);
+  }
+
+  .gold-theme-border {
+    @apply border-gold;
+  }
+
+  .gold-theme-bg {
+    @apply bg-gold;
+  }
+
+  .gold-theme-text {
+    @apply text-gold;
+  }
+}
